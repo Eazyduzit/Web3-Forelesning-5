@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>US Gov Earthquakes</title>
+
+<link href="bootstrap-jquery/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+<link href="css/google-map-style.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">  <!--alle disse klassene er bootstrap predefinerte klasser.-->
+
+    <header class="page-header">
+        <h1>US Gov jordskjelv 2.5++</h1>
+    </header><!--end mainPageHeader-->
+    
+    <section>
+        <input id="getEarthquakesBtn" class="btn btn-success" type="button" value="Hent jordskjelv">
+        <span id="markerInformationSpan" class="alert alert-info pull-right">Pek på markør for info</span>
+    </section><!--end menu-->
+    
+    <section id="googleMapSection">
+        
+    </section><!--end Google Map-->
+
+
+</div><!--end container-->
+
+<!--
+//Finne koordinater manuelt: http://www.mapcoordinates.net/en        
+//Google maps API: http://maps.google.com/maps/api/js?sensor=false
+//jsonbeautifier: http://jsbeautifier.org/
+//US GOV feed: http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson
+
+(her fikk vi meld om at vi ikke hadde valid API key når vi inspiserte siden, trykket på linken gikk videre til get key, fikk en key og la til i map url src'et. fjernet false delen og la til &key= + selve key)
+
+-->
+    
+    <script src="http://maps.google.com/maps/api/js?&key=AIzaSyBzZSkX1CzZ-Uis1rgcNDWrJjGR0P3cycc"></script>
+    <script src="bootstrap-jquery/js/jquery.js"></script>
+    <script src="scripts/google-map-app.js"></script>
+
+</body>
+</html>
